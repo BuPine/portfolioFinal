@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    background-color: #F3E6DD;
+    --primary-color-text: #2B120B;
+    --primary-color-headings: #BF5C23;
+    --primary-color-highlighter: #D9D9D9;
+}
+
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    color: var(--primary-color-text);
+}
+
+.menu{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu-panel{
+    position: absolute;
+    right: -264px;
+    top: 0;
+    width: 228px;
+    height: 450px;
+    background-color: #C4B99B;
+    font-size: 20px;
+    font-family: "inria sans";
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 32px;
+    transition: right 1.1s ease-in-out;
+}
+
+.menu-panel ul{
+    list-style: none;
+    padding: 0%; 
+}
+.menu-panel ul li{
+    margin-bottom: 32px;
+}
+.menu-panel ul li a{
+    text-decoration: none;
+    color: #2B120B;
+}
+
+.menu-panel.active{
+    right: 0;
+}
+.menu-list ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color:#BF5C23;
+    transition: transform 0.3s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+.menu-list ul li a:hover{
+    transform: scale(1.5);
+    text-shadow: 2px 2px 0.5px var(--primary-color-text);
+} 
+
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 47px;
+    height: 47px;
+    margin: 18px;
+}
+
+.page-menu{
+    justify-self: end;
+}
+
+.line{
+    margin: 3.4px;
+    width: 24px;
+    height: 2px;
+    background-color: #BF5C23;
+    border-radius: 8px;
+}
+.logo-span{
+    display: inline-block;
+    margin: 16px;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: var(--primary-color-headings)
+}
+
+.profile{
+    text-align: start;
+    margin: 1px 33px;
+}
+.profile-image img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+hr{
+    width: 230px;
+    height: 2px;
+    background-color: #BF5C23;
+    border-radius: 2px;
+    border: none;
+}
+.headline h3{
+    font-family: "Inria Sans";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--primary-color-headings);
+    margin: 0px; 
+}
+
+.frame{
+    width: 100%;
+    text-align: center;
+}
+
+.frame img{
+    display: inline-block;
+    width: 160px;
+    min-height: 175px;
+    border-radius: 5px;
+    margin: 16px;
+}
+
+.my-clients{
+    width: 100%;   
+}
+
+.card{
+    width: 100%;
+    font-family: "Jost";
+    font-size: 16px;
+    text-align: center;
+    margin-top: 23px;
+}
+.card h4{
+    font-family: "Inria Sans";
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--primary-color-headings);
+    margin: 0;
+}
+
+.card span{
+    display:inline-block;
+    background-color: var(--primary-color-highlighter);
+    padding: 4px;
+    margin-bottom: 3px;
+}
+.card p{
+    margin: 12px;
+}
+.contact{
+    width: 100%;
+    text-align: center;
+}
+
+
+.contact button{
+    border: none;
+    text-transform: lowercase;
+    font-size: 16px;
+    font-family: "jost";
+    font-weight: 600;
+    background-color: var(--primary-color-headings);
+    border-radius: 10px;
+    padding:5px 15px ;
+    margin: 18px;
+}
+
+.social-media{
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.social-media-icons ul{
+    list-style: none;
+    padding: 0%;
+}
+.social-media-icons ul li {
+    display: inline-block;
+    margin: 0 21px;
+}
+footer{
+    text-align: center;
+    padding-top: 25px;
+}
+
+.menu-list{
+    display: none;
+}
+.profile-learn-more{
+    display: none;
+}
+
+.my-works-intro{
+    display: none;
+}
+.gallery{
+    display: none;
+}
+
+.contact-form{
+    display: none;
+}
+.contact-details{
+    display: none;
+}
+
+.contact-intro p{
+    display: none;
+}
+
+
+@media (min-width:600px) and (max-width:1024px){
+    .hamburger{
+        display: none;
+    }
+
+.menu{
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 32px;
+}
+.menu-list{
+    display: block;
+
+}
+.menu-list ul{
+    list-style: none;
+    padding: 0%;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: "inria sans";
+    color: #BF5C23;
+}
+.menu-list ul li{
+    display:inline-block;
+    margin-right: 16px;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.profile-image img{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;}
+
+    .profile-learn-more{
+        display: grid;
+        align-items: center;
+        justify-items: start;
+    }
+
+    .profile-details span{
+        display: block;
+        font-size: 32px;
+        font-family: "jost";
+        text-transform: uppercase;
+        margin: 5px;
+        
+    }
+
+    .profile-details button{
+        background-color: #C4B99B;
+        font-size: 24px;
+        font-family: "jost";
+        width: 180px;
+        height: 45px;
+        border-radius: 10px;
+        border-color:#C4B99B
+    }
+
+    .my-works .frame{
+        display: none;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3,auto);
+        margin-top: 35px;
+    }
+    .gallery-item{
+        text-align: center;
+    }
+    .gallery img{
+    width: 327px;
+    height: 177px;
+    border-radius: 10px;
+    object-fit: cover;
+    }
+    .my-clients{
+        margin-top: 40px;
+    }
+    .my-clients p{
+        width: 366px;
+        margin: 15px auto;
+    }
+    .card{
+        margin: 10px;
+    }
+.btn-contact{
+    display: none;
+}    
+.contact-intro{
+    width: 100%;
+}
+
+.contact-intro p{
+    display: block;
+    width: 681px;
+    font-family: "jost";
+    text-align: left;
+}
+.contact-form{
+    display: block;
+    width: 100%;
+    font-family: "jost";
+}
+.contact-form form{
+    text-align: start;
+    box-sizing: border-box;
+    padding: 32px;
+}
+input, textarea{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    border-color: #C4B99B;
+}
+input{
+    height: 27px;
+    width: 260px;
+}
+.contact-form button{
+    background-color: #C4B99B;
+    font-family: "jost";
+    margin-left: 0;
+}
+.contact-details{
+    display: block;
+    width: 100%;
+}
+.contact-details ul{
+    display: block;
+    list-style: none;
+    padding: 0;
+    text-align: start;
+    margin-left: 32px;
+    font-size: 20px;
+    font-family: "jost";
+}
+
+}
+
+@media (min-width:1025px){
+    .hamburger{
+        display: none;
+    }
+    .logo-span{
+        font-size: 40px;
+        }
+
+
+.menu{
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+.menu-list{
+    display: block;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.menu-list ul{
+    list-style: none;
+    padding: 0%;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-family: "inria sans";
+    color: #BF5C23;
+    align-content: right;
+
+}
+.menu-list ul li{
+    display:inline-block;
+    margin-right: 68px;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.profile-image img{
+    width: 336px;
+    height: 336px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 90px;}
+
+    .profile-learn-more{
+        display: grid;
+        align-items: start;
+        justify-items: left;
+        margin-top: 20px;
+    }
+
+    .profile-details span{
+        display: block;
+        font-size: 40px;
+        font-family: "jost";
+        text-transform: uppercase;
+        margin: 20px;
+    }
+
+    .profile-details button{
+        background-color: #C4B99B;
+        font-size: 38px;
+        font-family: "jost";
+        width: 273px;
+        height: 71px;
+        border-radius: 10px;
+        border-color:#C4B99B;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .profile-details button:hover{
+        box-shadow: 5px 5px 3px var(--primary-color-text);
+    }
+
+    hr{
+        width: 718px;
+        height: 5px;
+        background-color: #BF5C23;
+        border-radius: 5px;
+        border: none;
+        align-self: center;
+    }
+    .headline h3{
+        font-family: "Inria Sans";
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+        color: var(--primary-color-headings);
+        margin: 0px; }
+
+     .frame{
+            display: none; }
+            .btn-contact{
+                display: none;
+            }
+     .gallery{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,auto);
+        margin: 32px auto;}
+        
+    .gallery-item{
+                text-align: center;
+            }
+    .gallery img{
+            width: 320px;
+            height: 377px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
+
+    .gallery img:hover{
+        transform: scale(1.1);
+        box-shadow: 15px 15px 5px;
+    }        
+    .my-works-intro p{
+        width: 923px;
+        margin-left: 62px;
+        font-family: "jost";
+        font-size: 18px;
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 80%;
+        font-family: "Jost";
+        font-size: 18px;
+        margin: 43px auto;
+        border: 2px solid #bf5c235a;
+        padding: 10px;
+
+    }
+    .card h4{
+        font-family: "Inria Sans";
+        font-size: 26px;
+        font-weight: 400;
+        color: var(--primary-color-headings);
+        margin: 0;
+    }
+    
+    .card span{
+        display:inline-block;
+        background-color: var(--primary-color-highlighter);
+        padding: 4px;
+        margin-bottom: 3px;
+    }
+    .card p{
+        margin: 0px;
+    }
+    .card-image img{
+        width:120px;
+        height:110px;
+    }
+
+    .card-content{
+        text-align: start;
+        box-sizing: border-box;
+        padding-right: 64px;
+    }
+
+    .role-description{
+        display: inline-block;
+        margin: 10px 0;
+    }
+    .get-in-touch{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .contact-form{
+        display: block;
+        width: 100%;
+        font-family: "jost";
+    }
+    .contact-form form{
+        display: block;
+        text-align: start;
+        box-sizing: border-box;
+        padding: 32px;
+    }
+    input, textarea{
+        width: 100%;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+        border: none;
+    }
+    input{
+        height: 27px;
+        width: 260px;
+        margin-bottom: 10px;
+    }
+
+    .input:focus, textarea:focus{
+        outline: none;
+        border-top: 2px solid var(--primary-color-headings);
+        border-left: 2px solid var(--primary-color-headings);
+    }
+    .contact-form button{
+        background-color: #C4B99B;
+        font-family: "jost";
+        margin-left: 0;
+    }
+
+    .contact-intro p{
+        display: block;
+        font-family: "jost";
+        font-size: 18px;
+        text-align: start;
+        margin-left: 62px;
+    }
+
+    .social-media{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        text-align: start;
+        box-sizing: border-box;
+        padding: 32px;
+    }
+
+    .social-media h3{
+        display: block;
+        text-align: left;
+        font-size:43px ;
+        margin-left: 0;
+    }
+
+    .contact-details{
+        display: block;
+        text-align: start;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        box-sizing: border-box;
+        padding: 32px;
+        font-size: 18px;
+    }
+
+    .contact-details ul{
+       list-style: none;
+       padding: 0;
+    }
+
+    .contact-details ul li{
+        margin-bottom: 32px;
+    }
+    .contact-form{
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .social-media-icons ul{
+        list-style: none;
+        padding: 0%;
+    }
+    .social-media-icons ul li {
+        display: inline-block;
+        margin: 0;
+    }
+    .menu-list ul li a :hover{
+        transform: scale(1,5);
+    } 
+}
+    
